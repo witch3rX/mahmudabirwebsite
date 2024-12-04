@@ -1,0 +1,235 @@
+/*------------------------- Layout styles ------------------------*/
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    background: url(../images/bg-body.jpg) no-repeat center center fixed;
+    background-size: cover; /* Ensure background scales */
+    font-family: Arial, sans-serif; /* Modern font */
+    color: #333; /* Readable text color */
+    margin: 0;
+}
+
+.page {
+    background: url(../images/bg-header.jpg) no-repeat center top;
+}
+
+/*------------------------- Font ------------------------*/
+@font-face {
+    font-family: 'RokkittRegular';
+    src: url('rokkitt-regular-webfont.eot');
+    src: url('rokkitt-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('rokkitt-regular-webfont.woff') format('woff'),
+         url('rokkitt-regular-webfont.ttf') format('truetype'),
+         url('rokkitt-regular-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*------------------------- Header ------------------------*/
+.header {
+    background: url(../images/bg-navigation.jpg) no-repeat center 90px;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    height: 105px;
+    padding: 36px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a#logo img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.header ul {
+    margin: 0;
+    list-style: none;
+    padding: 13px 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #5e5e5e;
+    font-family: 'RokkittRegular';
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header ul li a:hover, .header ul li.selected a {
+    color: #f78117;
+    background-color: #eee;
+}
+
+/*------------------------- Body ------------------------*/
+.body {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.body div#featured {
+    background: url(../images/house.jpg) no-repeat right top;
+    height: 448px;
+    padding: 0 0 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.body div#featured h3 {
+    color: #f78117;
+    font-size: 36px;
+    font-family: 'RokkittRegular';
+    margin: 0 0 30px;
+    width: 490px;
+    padding: 100px 0 0;
+    font-weight: normal;
+}
+
+.body div#featured input {
+    background: url(../images/interface.jpg) no-repeat;
+    border: 0;
+    height: 48px;
+    width: 216px;
+    font-family: 'RokkittRegular';
+    color: #fff;
+    font-size: 30px;
+    margin: 28px 0 0 125px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.body div#featured input:hover {
+    background: #555;
+}
+
+/*------------------------- Footer ------------------------*/
+.footer {
+    width: 100%;
+    max-width: 940px;
+    background: url(../images/bg-footer.jpg) no-repeat center top;
+    padding: 65px 10px 207px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #5b5b5b;
+    font-size: 10px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f78117;
+    background-color: #eee;
+}
+
+/*------------------------- Responsive Design ------------------------*/
+@media (max-width: 768px) {
+    .header, .body, .footer {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .header ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .body div#featured h3 {
+        font-size: 24px;
+    }
+
+    .body div#featured input {
+        font-size: 18px;
+        margin: 20px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header ul {
+        gap: 10px;
+    }
+
+    .body div#featured h3 {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .body div#featured input {
+        font-size: 16px;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333333; /* Dark gray text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #003366; /* Deep blue headings */
+    text-transform: uppercase; /* All caps */
+}
+button, .btn {
+    background-color: #f0ad4e; /* Gold */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.1);
+    background-color: #d8943c; /* Darker gold on hover */
+}
